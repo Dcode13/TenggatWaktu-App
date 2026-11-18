@@ -1,8 +1,4 @@
-import { registerRootComponent } from 'expo';
-
-import App from './App';
-
-// registerRootComponent calls AppRegistry.registerComponent('main', () => App);
-// It also ensures that whether you load the app in Expo Go or in a native build,
-// the environment is set up appropriately
-registerRootComponent(App);
+import { Platform } from 'react-native';
+if (Platform.OS === 'web' && typeof document !== 'undefined') document.documentElement.lang = 'id';
+// Router must be registered last so platform setup runs before the app mounts.
+import 'expo-router/entry';

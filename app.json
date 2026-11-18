@@ -1,25 +1,71 @@
 {
   "expo": {
-    "name": "pomodoro-app",
-    "slug": "pomodoro-app",
-    "version": "1.0.0",
-    "orientation": "portrait",
+    "name": "TenggatWaktu",
+    "slug": "pomodoro-pribadi",
+    "version": "2.0.0",
+    "orientation": "default",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#101411",
     "ios": {
       "supportsTablet": true
     },
     "android": {
+      "package": "com.pomodoropribadi.app",
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#101411",
         "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
-      },
-      "predictiveBackGestureEnabled": false
+      }
+    },
+    "androidStatusBar": {
+      "barStyle": "light-content",
+      "backgroundColor": "#101411"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "name": "TenggatWaktu",
+      "shortName": "TenggatWaktu",
+      "themeColor": "#101411",
+      "backgroundColor": "#101411",
+      "output": "single"
+    },
+    "plugins": [
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#101411",
+          "image": "./assets/android-icon-foreground.png",
+          "imageWidth": 160
+        }
+      ],
+      [
+        "expo-navigation-bar",
+        {
+          "enforceContrast": false,
+          "style": "light"
+        }
+      ],
+      "expo-router",
+      "expo-sharing",
+      "expo-notifications",
+      "expo-sqlite",
+      "expo-font"
+    ],
+    "scheme": "pomodoropribadi",
+    "extra": {
+      "expo-navigation-bar": {
+        "enforceContrast": false,
+        "style": "light"
+      },
+      "router": {
+        "asyncRoutes": {
+          "web": true
+        }
+      },
+      "eas": {
+        "projectId": "6fc9dd2b-7263-44b4-94cd-9bf94f595b56"
+      }
     }
   }
 }
